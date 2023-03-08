@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf\Driver;
+namespace cideale\libmergepdf\Driver;
 
-use iio\libmergepdf\Exception;
-use iio\libmergepdf\Pages;
-use iio\libmergepdf\Source\SourceInterface;
+use cideale\libmergepdf\Exception;
+use cideale\libmergepdf\Pages;
+use cideale\libmergepdf\Source\SourceInterface;
 use setasign\Fpdi\Tcpdf\Fpdi;
 use Prophecy\Argument;
 

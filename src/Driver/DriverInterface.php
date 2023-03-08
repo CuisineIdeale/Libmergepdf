@@ -1,8 +1,8 @@
 <?php
 
-namespace iio\libmergepdf\Driver;
+namespace cideale\libmergepdf\Driver;
 
-use iio\libmergepdf\Source\SourceInterface;
+use cideale\libmergepdf\Source\SourceInterface;
 
 interface DriverInterface
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf;
+namespace cideale\libmergepdf;
 
-use iio\libmergepdf\Driver\DriverInterface;
-use iio\libmergepdf\Driver\DefaultDriver;
-use iio\libmergepdf\Source\SourceInterface;
-use iio\libmergepdf\Source\FileSource;
-use iio\libmergepdf\Source\RawSource;
+use cideale\libmergepdf\Driver\DriverInterface;
+use cideale\libmergepdf\Driver\DefaultDriver;
+use cideale\libmergepdf\Source\SourceInterface;
+use cideale\libmergepdf\Source\FileSource;
+use cideale\libmergepdf\Source\RawSource;
 
 /**
  * Merge existing pdfs into one

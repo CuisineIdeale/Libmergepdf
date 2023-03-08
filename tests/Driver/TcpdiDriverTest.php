@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf\Driver;
+namespace cideale\libmergepdf\Driver;
 
-use iio\libmergepdf\Source\SourceInterface;
-use iio\libmergepdf\Exception;
-use iio\libmergepdf\Pages;
+use cideale\libmergepdf\Source\SourceInterface;
+use cideale\libmergepdf\Exception;
+use cideale\libmergepdf\Pages;
 
 class TcpdiDriverTest extends \PHPUnit\Framework\TestCase
 {

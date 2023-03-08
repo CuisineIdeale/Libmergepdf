@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf;
+namespace cideale\libmergepdf;
 
 /**
  * Parse page numbers from string

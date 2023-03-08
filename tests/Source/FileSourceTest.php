@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf\Source;
+namespace cideale\libmergepdf\Source;
 
-use iio\libmergepdf\PagesInterface;
-use iio\libmergepdf\Exception;
+use cideale\libmergepdf\PagesInterface;
+use cideale\libmergepdf\Exception;
 
 class FileSourceTest extends \PHPUnit\Framework\TestCase
 {

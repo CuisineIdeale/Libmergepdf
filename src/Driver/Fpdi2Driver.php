@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf\Driver;
+namespace cideale\libmergepdf\Driver;
 
-use iio\libmergepdf\Exception;
-use iio\libmergepdf\Source\SourceInterface;
+use cideale\libmergepdf\Exception;
+use cideale\libmergepdf\Source\SourceInterface;
 use setasign\Fpdi\Fpdi as FpdiFpdf;
 use setasign\Fpdi\Tcpdf\Fpdi as FpdiTcpdf;
 use setasign\Fpdi\PdfParser\StreamReader;
