@@ -1,5 +1,5 @@
 {
-    "name": "iio/libmergepdf",
+    "name": "ci/libmergepdf",
     "description": "Library for merging multiple PDFs",
     "keywords": ["pdf", "merge"],
     "homepage": "https://github.com/hanneskod/libmergepdf",
