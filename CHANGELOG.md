@@ -109,7 +109,7 @@ After some early deviations this project now adheres to [Semantic Versioning](ht
 ## [2.1] - 2013-01-31
 
 ### Changed
-- Moved to `cideale` namespace.
+- Moved to `iio` namespace.
 
 ## [2.0] - 2012-10-02
 
