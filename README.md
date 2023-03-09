@@ -1,15 +1,13 @@
-# libmergepdf
+# Libmergepdf
 
-[![Packagist Version](https://img.shields.io/packagist/v/cideale/libmergepdf.svg?style=flat-square)](https://packagist.org/packages/cideale/libmergepdf)
-[![Build Status](https://img.shields.io/travis/hanneskod/libmergepdf/master.svg?style=flat-square)](https://travis-ci.com/github/hanneskod/libmergepdf)
-[![Quality Score](https://img.shields.io/scrutinizer/g/hanneskod/libmergepdf.svg?style=flat-square)](https://scrutinizer-ci.com/g/hanneskod/libmergepdf)
+[![Packagist Version](https://img.shields.io/packagist/v/Cideale/Libmergepdf.svg?style=flat-square)](https://packagist.org/packages/Cideale/Libmergepdf)
 
 PHP library for merging multiple PDFs.
 
 ## Installation
 
 ```shell
-composer require cideale/libmergepdf
+composer require Cideale/Libmergepdf
 ```
 
 ## Usage
@@ -17,8 +15,8 @@ composer require cideale/libmergepdf
 Append the first ten pages of **bar.pdf** to **foo.pdf**:
 
 ```php
-use cideale\libmergepdf\Merger;
-use cideale\libmergepdf\Pages;
+use Cideale\Libmergepdf\Merger;
+use Cideale\Libmergepdf\Pages;
 
 $merger = new Merger;
 $merger->addFile('foo.pdf');
@@ -29,7 +27,7 @@ $createdPdf = $merger->merge();
 Bulk add files from an iterator:
 
 ```php
-use cideale\libmergepdf\Merger;
+use Cideale\Libmergepdf\Merger;
 
 $merger = new Merger;
 $merger->addIterator(['A.pdf', 'B.pdf']);
@@ -42,8 +40,8 @@ The default `FPDI` driver is not able handle compressed pdfs of version 1.5 or l
 Circumvent this limitation by using the slightly more experimental `TCPDI` driver.
 
 ```php
-use cideale\libmergepdf\Merger;
-use cideale\libmergepdf\Driver\TcpdiDriver;
+use Cideale\Libmergepdf\Merger;
+use Cideale\Libmergepdf\Driver\TcpdiDriver;
 
 $merger = new Merger(new TcpdiDriver);
 ```
@@ -53,9 +51,9 @@ $merger = new Merger(new TcpdiDriver);
 Immutability may be achieved by using a `driver` directly.
 
 ```php
-use cideale\libmergepdf\Driver\Fpdi2Driver;
-use cideale\libmergepdf\Source\FileSource;
-use cideale\libmergepdf\Pages;
+use Cideale\Libmergepdf\Driver\Fpdi2Driver;
+use Cideale\Libmergepdf\Source\FileSource;
+use Cideale\Libmergepdf\Pages;
 
 $merger = new Fpdi2Driver;
 

@@ -114,7 +114,7 @@ After some early deviations this project now adheres to [Semantic Versioning](ht
 ## [2.0] - 2012-10-02
 
 ### Changed
-- FPDI must be injected when creating a new libmergepdf instance.
+- FPDI must be injected when creating a new Libmergepdf instance.
 
 ## [1.0]
 - Initial release

@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace cideale\libmergepdf;
+namespace Cideale\Libmergepdf;
 
-use cideale\libmergepdf\Driver\DriverInterface;
-use cideale\libmergepdf\Source\FileSource;
-use cideale\libmergepdf\Source\RawSource;
+use Cideale\Libmergepdf\Driver\DriverInterface;
+use Cideale\Libmergepdf\Source\FileSource;
+use Cideale\Libmergepdf\Source\RawSource;
 
 class MergerTest extends \PHPUnit\Framework\TestCase
 {

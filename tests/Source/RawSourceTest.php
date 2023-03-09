@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace cideale\libmergepdf\Source;
+namespace Cideale\Libmergepdf\Source;
 
-use cideale\libmergepdf\PagesInterface;
+use Cideale\Libmergepdf\PagesInterface;
 
 class RawSourceTest extends \PHPUnit\Framework\TestCase
 {

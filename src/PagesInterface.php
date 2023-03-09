@@ -1,6 +1,6 @@
 <?php
 
-namespace cideale\libmergepdf;
+namespace Cideale\Libmergepdf;
 
 interface PagesInterface
 {

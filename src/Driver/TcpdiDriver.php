@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace cideale\libmergepdf\Driver;
+namespace Cideale\Libmergepdf\Driver;
 
-use cideale\libmergepdf\Exception;
-use cideale\libmergepdf\Source\SourceInterface;
+use Cideale\Libmergepdf\Exception;
+use Cideale\Libmergepdf\Source\SourceInterface;
 
 final class TcpdiDriver implements DriverInterface
 {

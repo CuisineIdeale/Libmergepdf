@@ -2,18 +2,18 @@
     "name": "cideale/libmergepdf",
     "description": "Library for merging multiple PDFs",
     "keywords": ["pdf", "merge"],
-    "homepage": "https://github.com/hanneskod/libmergepdf",
+    "homepage": "https://github.com/CuisineIdeale/Libmergepdff",
     "type": "library",
     "license": "WTFPL",
     "authors": [
         {
-            "name": "Hannes Forsgård",
-            "email": "hannes.forsgard@fripost.org"
+            "name": "CuisineIdéale",
+            "email": "support@cuisineideale.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "cideale\\libmergepdf\\": "src/"
+            "Cideale\\Libmergepdf\\": "src/"
         },
         "classmap": [
             "tcpdi/"

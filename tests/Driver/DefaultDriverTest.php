@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace cideale\libmergepdf\Driver;
+namespace Cideale\Libmergepdf\Driver;
 
-use cideale\libmergepdf\Source\SourceInterface;
+use Cideale\Libmergepdf\Source\SourceInterface;
 
 class DefaultDriverTest extends \PHPUnit\Framework\TestCase
 {

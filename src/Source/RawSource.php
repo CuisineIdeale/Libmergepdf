@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace cideale\libmergepdf\Source;
+namespace Cideale\Libmergepdf\Source;
 
-use cideale\libmergepdf\PagesInterface;
-use cideale\libmergepdf\Pages;
+use Cideale\Libmergepdf\PagesInterface;
+use Cideale\Libmergepdf\Pages;
 
 /**
  * Pdf source from raw string

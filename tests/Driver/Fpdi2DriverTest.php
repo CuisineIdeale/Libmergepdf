@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace cideale\libmergepdf\Driver;
+namespace Cideale\Libmergepdf\Driver;
 
-use cideale\libmergepdf\Exception;
-use cideale\libmergepdf\Pages;
-use cideale\libmergepdf\Source\SourceInterface;
+use Cideale\Libmergepdf\Exception;
+use Cideale\Libmergepdf\Pages;
+use Cideale\Libmergepdf\Source\SourceInterface;
 use setasign\Fpdi\Tcpdf\Fpdi;
 use Prophecy\Argument;
 

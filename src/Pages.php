@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace cideale\libmergepdf;
+namespace Cideale\Libmergepdf;
 
 /**
  * Parse page numbers from string
