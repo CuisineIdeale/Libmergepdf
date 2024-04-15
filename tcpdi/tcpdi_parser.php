@@ -285,7 +285,7 @@ class tcpdi_parser
     {
         $params = $this->getObjectVal($this->xref['trailer'][1]['/Root']);
         $objref = null;
-        if ($params && $params[1] && is_array($params[1][1])) {
+        if ($params && $params[1] && is_array($params[1]) && is_array($params[1][1])) {
             foreach ($params[1][1] as $k => $v) {
                 if ($k == '/Pages') {
                     $objref = $v;
