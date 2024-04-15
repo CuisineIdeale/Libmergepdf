@@ -3,8 +3,8 @@
 // File name   : tcpdi_parser.php
 // Version     : 1.1
 // Begin       : 2013-09-25
-// Last Update : 2016-05-03
-// Author      : Paul Nicholls - https://github.com/pauln
+// Last Update : 2024-04-15
+// Author      : Cuisine Idéale Inc. - https://github.com/CuisineIdeale
 // License     : GNU-LGPL v3 (http://www.gnu.org/copyleft/lesser.html)
 //
 // Based on    : tcpdf_parser.php
