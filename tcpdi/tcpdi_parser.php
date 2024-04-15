@@ -182,7 +182,6 @@ class tcpdi_parser
      * @private integer
      */
     private $pageno;
-
     /**
      * PDF version of the loaded document
      * @private string
@@ -387,8 +386,12 @@ class tcpdi_parser
             // Cross-Reference
             $xref = $this->decodeXref($startxref, $xref);
         } else {
-            // Cross-Reference Stream
-            $xref = $this->decodeXrefStream($startxref, $xref);
+            try {
+                // Cross-Reference Stream
+                $xref = $this->decodeXrefStream($startxref, $xref);
+            } catch (\Exception $e) {
+                $xref = $this->decodeXref($startxref, $xref);
+            }
         }
         if (empty($xref)) {
             $this->Error('Unable to find xref');
@@ -761,8 +764,7 @@ class tcpdi_parser
                     $next = strcspn($data, "\r\n", $offset);
                     if ($next > 0) {
                         $offset += $next;
-                        list($obj, $unused) = $this->getRawObject($offset, $data);
-                        return $obj;
+                        return $this->getRawObject($offset, $data);
                     }
                     break;
                 }
@@ -855,7 +857,7 @@ class tcpdi_parser
                     break;
                 }
             default:{
-                    $frag = $data[$offset] . @$data[$offset + 1] . @$data[$offset + 2] . @$data[$offset + 3];
+                    $frag = substr($data, $offset, 4);
                     switch ($frag) {
                         case 'endo':
                             // indirect object
@@ -982,7 +984,7 @@ class tcpdi_parser
     {
         $obj = explode('_', $obj_ref);
         if (($obj === false) or (count($obj) != 2)) {
-            $this->Error('Invalid object reference: ' . $obj);
+            $this->Error('Invalid object reference: ' . json_encode($obj));
             return;
         }
         $objref = $obj[0] . ' ' . $obj[1] . ' obj';
@@ -1310,7 +1312,7 @@ class tcpdi_parser
             }
         }
 
-        if ($annots[0] == PDF_TYPE_OBJREF) {
+        if (isset($annots[0]) && $annots[0] == PDF_TYPE_OBJREF) {
             return $this->getObjectVal($annots);
         }
 
@@ -1494,8 +1496,8 @@ class tcpdi_parser
             if (!isset($obj[1][1]['/Parent'])) {
                 return false;
             } else {
-                $res = (array) $this->_getPageRotation($obj[1][1]['/Parent']);
-                if ($res[0] == PDF_TYPE_OBJECT) {
+                $res = $this->_getPageRotation($obj[1][1]['/Parent']);
+                if (is_array($res) && $res[0] == PDF_TYPE_OBJECT) {
                     return $res[1];
                 }
 
@@ -1513,10 +1515,13 @@ class tcpdi_parser
     public function Error($msg)
     {
         // exit program and print error
-        die("<strong>TCPDI_PARSER ERROR [{$this->uniqueid}]: </strong>" . $msg);
+        throw new TcpdiParserException($msg);
     }
 
 } // END OF TCPDF_PARSER CLASS
+
+class TcpdiParserException extends Exception
+{}
 
 //============================================================+
 // END OF FILE
