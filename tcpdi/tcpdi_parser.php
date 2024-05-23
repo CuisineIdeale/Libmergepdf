@@ -752,8 +752,13 @@ class tcpdi_parser
         $objval = ''; // object value to be returned
 
         // skip initial white space chars: \x00 null (NUL), \x09 horizontal tab (HT), \x0A line feed (LF), \x0C form feed (FF), \x0D carriage return (CR), \x20 space (SP)
-        while (strspn($data[$offset], "\x00\x09\x0a\x0c\x0d\x20")) {
+        while ($offset < strlen($data) && strspn($data[$offset], "\x00\x09\x0a\x0c\x0d\x20")) {
             $offset++;
+        }
+
+        if ($offset == strlen($data)) {
+            throw new Exception("Error Processing Request", 1);
+
         }
         // get first char
         $char = $data[$offset];
